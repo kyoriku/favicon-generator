@@ -53,7 +53,7 @@
     .container {
       background: rgba(245, 247, 250, 0.95);
       border-radius: 20px;
-      padding: 40px;
+      padding: 24px;
       max-width: 1000px;
       width: 100%;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -149,7 +149,6 @@
     .button-group {
       display: flex;
       gap: 12px;
-      margin-bottom: 30px;
     }
 
     button {
@@ -200,6 +199,7 @@
       font-size: 20px;
       font-weight: 600;
       color: #1a202c;
+      margin-top: 30px;
       margin-bottom: 20px;
     }
 
@@ -225,6 +225,12 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 12px;
     }
+
+    .download-buttons svg {
+      width: 16px;
+      height: 16px;
+    }
+
 
     .note {
       margin-top: 20px;
@@ -332,12 +338,24 @@
       </div>
 
       <div class="download-buttons">
-        <button onclick="downloadPNG(16)">📥 16x16 (favicon-16x16.png)</button>
-        <button onclick="downloadPNG(32)">📥 32x32 (favicon-32x32.png)</button>
-        <button onclick="downloadPNG(180)">📥 180x180 (apple-touch-icon.png)</button>
-        <button onclick="downloadPNG(192)">📥 192x192 (android-chrome-192x192.png)</button>
-        <button onclick="downloadPNG(512)">📥 512x512 (android-chrome-512x512.png)</button>
-        <button onClick="downloadAll()">Download all</button>
+        <button onclick="downloadPNG(16)">
+          <i data-lucide="download"></i> favicon-16x16.png
+        </button>
+        <button onclick="downloadPNG(32)">
+          <i data-lucide="download"></i> favicon-32x32.png
+        </button>
+        <button onclick="downloadPNG(180)">
+          <i data-lucide="download"></i> apple-touch-icon.png
+        </button>
+        <button onclick="downloadPNG(192)">
+          <i data-lucide="download"></i> android-chrome-192x192.png
+        </button>
+        <button onclick="downloadPNG(512)">
+          <i data-lucide="download"></i> android-chrome-512x512.png
+        </button>
+        <button onclick="downloadAll()">
+          <i data-lucide="download"></i> Download all
+        </button>
       </div>
 
       <div class="note">
@@ -359,6 +377,7 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
   <script>
     let currentSVG = '';
 
@@ -492,6 +511,8 @@
 
       // Scroll to preview
       previewSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      lucide.createIcons()
     }
 
     function drawFavicon(canvas, size) {
@@ -634,6 +655,8 @@
       });
     }
   </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
 </body>
 
 </html>
