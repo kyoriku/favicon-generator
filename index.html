@@ -5,6 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favicon Generator</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Free online favicon generator - create favicons for all devices from any SVG file. Generate 16x16, 32x32, 180x180, 192x192, and 512x512 PNG favicons instantly.">
+  <meta name="author" content="Austin Graham">
+  <meta name="keywords" content="favicon generator, svg to png, favicon maker, free favicon, online favicon generator">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyoriku.github.io/favicon-generator/">
+  <meta property="og:title" content="Favicon Generator">
+  <meta property="og:description"
+    content="Free online favicon generator - create favicons for all devices from any SVG file. Generate 16x16, 32x32, 180x180, 192x192, and 512x512 PNG favicons instantly.">
+  <meta property="og:image" content="https://kyoriku.github.io/favicon-generator/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kyoriku.github.io/favicon-generator/">
+  <meta property="twitter:title" content="Favicon Generator">
+  <meta property="twitter:description"
+    content="Free online favicon generator - create favicons for all devices from any SVG file. Generate 16x16, 32x32, 180x180, 192x192, and 512x512 PNG favicons instantly.">
+  <meta property="twitter:image" content="https://kyoriku.github.io/favicon-generator/og-image.png">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -43,7 +67,7 @@
 
     .subtitle {
       margin: 0 0 30px;
-      color: #718096;
+      color: #4a5568;
       font-size: 16px;
     }
 
@@ -70,20 +94,20 @@
     }
 
     .drop-zone-text {
-      color: #4a5568;
+      color: #2d3748;
       font-size: 16px;
       margin-bottom: 8px;
     }
 
     .drop-zone-hint {
-      color: #a0aec0;
+      color: #4a5568;
       font-size: 14px;
     }
 
     .divider {
       text-align: center;
       margin: 20px 0;
-      color: #718096;
+      color: #4a5568;
       position: relative;
     }
 
@@ -160,7 +184,7 @@
     }
 
     button.secondary:hover {
-      background: #a0aec0;
+      background: #c2cbd6;
     }
 
     .preview-section {
@@ -271,8 +295,8 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Universal Favicon Generator</h1>
+  <main class="container">
+    <h1>Favicon Generator</h1>
     <p class="subtitle">Create favicons for all devices from any SVG</p>
 
     <div class="error" id="error"></div>
@@ -317,8 +341,8 @@
       </div>
 
       <div class="note">
-        <strong>💡 How to use:</strong><br>
-        1. Download all the PNG files above<br>
+        <strong>How to use:</strong><br>
+        1. Download the PNG files above<br>
         2. Place them in a <code>/favicon</code> directory in your project<br>
         3. Add the HTML code below to your &lt;head&gt; section
       </div>
@@ -332,7 +356,7 @@
         &lt;link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png"&gt;
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script>
