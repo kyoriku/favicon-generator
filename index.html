@@ -29,11 +29,13 @@
   <meta property="twitter:image" content="https://kyoriku.github.io/favicon-generator/og-image.png">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+  <!-- Styles -->
   <style>
     * {
       box-sizing: border-box;
@@ -297,6 +299,10 @@
     input[type="file"] {
       display: none;
     }
+
+    .margin-right {
+      margin-right: 6px;
+    }
   </style>
 </head>
 
@@ -339,22 +345,22 @@
 
       <div class="download-buttons">
         <button onclick="downloadPNG(16)">
-          <i data-lucide="download"></i> favicon-16x16.png
+          <i data-lucide="download" class="margin-right"></i> favicon-16x16.png
         </button>
         <button onclick="downloadPNG(32)">
-          <i data-lucide="download"></i> favicon-32x32.png
+          <i data-lucide="download" class="margin-right"></i> favicon-32x32.png
         </button>
         <button onclick="downloadPNG(180)">
-          <i data-lucide="download"></i> apple-touch-icon.png
+          <i data-lucide="download" class="margin-right"></i> apple-touch-icon.png
         </button>
         <button onclick="downloadPNG(192)">
-          <i data-lucide="download"></i> android-chrome-192x192.png
+          <i data-lucide="download" class="margin-right"></i> android-chrome-192x192.png
         </button>
         <button onclick="downloadPNG(512)">
-          <i data-lucide="download"></i> android-chrome-512x512.png
+          <i data-lucide="download" class="margin-right"></i> android-chrome-512x512.png
         </button>
         <button onclick="downloadAll()">
-          <i data-lucide="download"></i> Download all
+          <i data-lucide="download" class="margin-right"></i> Download all
         </button>
       </div>
 
@@ -469,7 +475,7 @@
     function validateSVG(svgString) {
       // Basic validation
       if (!svgString.trim()) {
-        showError('Please provide SVG code');
+        showError('Please provide SVG file or code');
         return false;
       }
 
@@ -656,7 +662,6 @@
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-
 </body>
 
 </html>
